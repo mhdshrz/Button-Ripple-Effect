@@ -1,0 +1,49 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: aliceblue;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-size: 4rem;
+}
+
+.btn {
+	background-color: pink;
+	padding: 4rem 8rem;
+	border-radius: 1rem;
+	text-decoration: none;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+	color: black;
+	font-weight: bold;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn::before {
+	position: absolute;
+	content: "";
+	background-color: orange;
+	width: 0;
+	height: 0;
+	left: var(--xC);
+	top: var(--yC);
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+	width: 65rem;
+	height: 65rem;
+}
+
+.btn span {
+	position: relative;
+	z-index: 9;
+}
